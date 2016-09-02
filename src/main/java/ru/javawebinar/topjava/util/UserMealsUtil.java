@@ -39,10 +39,8 @@ public class UserMealsUtil {
 //        }
 //        for (UserMeal userMeal : mealList) {
 //            if (TimeUtil.isBetween(userMeal.getDateTime().toLocalTime(), startTime, endTime)) {
-//                if (caloriesPerEachDay.get(userMeal.getDateTime().toLocalDate()) > caloriesPerDay) {
-//                    result.add(new UserMealWithExceed(userMeal.getDateTime(), userMeal.getDescription(), userMeal.getCalories(), true));
-//                } else
-//                    result.add(new UserMealWithExceed(userMeal.getDateTime(), userMeal.getDescription(), userMeal.getCalories(), false));
+//                result.add(new UserMealWithExceed(userMeal.getDateTime(), userMeal.getDescription(), userMeal.getCalories(),
+//                        caloriesPerEachDay.get(userMeal.getDateTime().toLocalDate()) > caloriesPerDay));
 //            }
 //        }
 //        return result;
