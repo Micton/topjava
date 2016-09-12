@@ -24,7 +24,7 @@
             </c:otherwise>
         </c:choose>
         <tr style="color: ${col}">
-            <th><c:out value="${f:matches(meal.dateTime, 'dd.MM.yyyy')}"/></th>
+            <th><c:out value="${f:matches(meal.dateTime, 'dd.MM.yyyy HH:mm')}"/></th>
             <th><c:out value="${meal.description}"/></th>
             <th><c:out value="${meal.calories}"/></th>
         </tr>
