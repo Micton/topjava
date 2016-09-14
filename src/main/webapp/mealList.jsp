@@ -9,6 +9,13 @@
 <body>
 <h2><a href="index.html">Home</a></h2>
 <h2>Meals list</h2>
+<p>Add Meal</p>
+<form action="meals" method="post">
+    <p>Select date: <label><input type="datetime-local" name="date" value="2016-09-14T00:00"></label></p>
+    <p>Set Description <label><input type="text" name="description"></label></p>
+    <p>Set Calories <label><input type="text" name="calories"></label></p>
+    <input type="submit" value="Add Meal">
+</form>
 <table class="table table-hover table-bordered">
     <thead style="background-color: #bce8f1;">
     <tr>
@@ -33,8 +40,8 @@
             <th><c:out value="${f:formatDateTime(meal.dateTime, 'dd.MM.yyyy HH:mm')}"/></th>
             <th><c:out value="${meal.description}"/></th>
             <th><c:out value="${meal.calories}"/></th>
-            <th><c:out value="Update"/></th>
-            <th><c:out value="Delete"/></th>
+            <th><a href="update?id=<c:out value='${meal.id}'/>">Update</a></th>
+            <th><a href="meals?id=<c:out value='${meal.id}'/>&operation=delete">Delete</a></th>
         </tr>
         </tbody>
     </c:forEach>
