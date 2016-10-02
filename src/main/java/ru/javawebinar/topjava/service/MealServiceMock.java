@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public class MealServiceMock implements MealService {
 
-    List<Meal> meals = MealsUtil.meals;
+    List<Meal> meals = MealsUtil.MEALS;
 
 
     @Override
